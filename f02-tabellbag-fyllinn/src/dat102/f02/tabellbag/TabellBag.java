@@ -65,8 +65,23 @@ public class TabellBag<T> implements BagADT<T> {
 
 	@Override
 	public boolean remove(T anEntry) {
-		// TODO Auto-generated method stub
-		return false;
+
+		boolean funnet = false;
+		int indeks = 0;
+		while(indeks < antall && !funnet) {
+			if(anEntry.equals(tabell[indeks])) {
+				funnet = true;
+			} else {
+				indeks++;
+			}
+		}
+		if(!funnet) {
+			return false;
+		}
+		tabell[indeks] = tabell[antall-1];
+		tabell[antall-1] = null;
+		antall--;
+		return true;
 	}
 
 	@Override

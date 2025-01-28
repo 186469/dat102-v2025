@@ -35,31 +35,36 @@ public class LenketBag<T> implements BagADT<T> {
 
 	@Override
 	public int getCurrentSize() {
-		//TODO
-		return 0; 
+		return antall; 
 	}
 
 	@Override
 	public boolean isEmpty() {
-		//TODO
-		return false;
+		return antall == 0;
 	}
 
 	@Override
 	public boolean add(T newEntry) {
-		//TODO
-		// Legger inn først i listen siden det er enklest
 		
-		return false;
+		Node ny = new Node(newEntry);
+		ny.neste = forste;
+		forste = ny;
+		antall++;
+		return true;
 	}
 
 	@Override
 	public T remove() {
-		//TODO
 		// Først sjekke om tom
+		if (forste == null) {
+			return null;
+		}
 		
 		// Fjerner den første siden det er enklest
-		return null;
+		T data = forste.data;
+		forste = forste.neste;
+		antall--;
+		return data;
 	}
 
 	@Override
@@ -81,7 +86,15 @@ public class LenketBag<T> implements BagADT<T> {
 	 * Returnerer referanse til node hvis funnet, ellers null.
 	 */
 	private Node finnNode(T entry) {
-		//TODO
+
+		Node p = forste;
+		while(p != null) {
+			if(p.data.equals(entry)) {
+				return p;
+			} else {
+				p = p.neste;
+			}
+		}
 		return null;
 	}
 

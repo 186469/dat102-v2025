@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		final long N = 300_000L;
+		final long N = 100_000L;
 		
 		taTidOgSkrivUt("A", n -> sum1tilnAlgoA(n), N);
 		taTidOgSkrivUt("B", n -> sum1tilnAlgoB(n), N);
