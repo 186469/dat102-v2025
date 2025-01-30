@@ -1,11 +1,21 @@
 package dat102.f02.tabellbag;
 
+<<<<<<< Updated upstream
+=======
+import java.util.ArrayList;
+import java.util.Arrays;
+
+>>>>>>> Stashed changes
 /**
  * En implementasjon av BagADT
  * 
  * @author Lars-Petter Helland
  */
+<<<<<<< Updated upstream
 public class TabellBag<T> implements BagADT<T> {
+=======
+public class TabellBag<T> implements BagADT <T> {
+>>>>>>> Stashed changes
 
 	private static final int DEFAULT_KAPASITET = 10;
 
@@ -37,16 +47,24 @@ public class TabellBag<T> implements BagADT<T> {
 	private boolean erFull() {
 		return antall == tabell.length;
 	}
+<<<<<<< Updated upstream
 	
+=======
+>>>>>>> Stashed changes
 	@Override
 	public boolean add(T newEntry) {
 		
 		if (erFull()) {
 			return false;
 		}
+<<<<<<< Updated upstream
 		
 		tabell[antall] = newEntry;
 		antall++;
+=======
+		tabell[antall] = newEntry;
+		antall++;		
+>>>>>>> Stashed changes
 		return true;
 	}
 
@@ -56,7 +74,10 @@ public class TabellBag<T> implements BagADT<T> {
 		if (isEmpty()) {
 			return null;
 		}
+<<<<<<< Updated upstream
 		
+=======
+>>>>>>> Stashed changes
 		T element = tabell[antall-1];
 		tabell[antall-1] = null;
 		antall--;
@@ -65,6 +86,7 @@ public class TabellBag<T> implements BagADT<T> {
 
 	@Override
 	public boolean remove(T anEntry) {
+<<<<<<< Updated upstream
 
 		boolean funnet = false;
 		int indeks = 0;
@@ -82,6 +104,10 @@ public class TabellBag<T> implements BagADT<T> {
 		tabell[antall-1] = null;
 		antall--;
 		return true;
+=======
+		// TODO Auto-generated method stub
+		return false;
+>>>>>>> Stashed changes
 	}
 
 	@Override
@@ -105,7 +131,11 @@ public class TabellBag<T> implements BagADT<T> {
 			}
 		}
 		return false;
+<<<<<<< Updated upstream
 	}
+=======
+		}
+>>>>>>> Stashed changes
 
 	@Override
 	public T[] toArray() {
