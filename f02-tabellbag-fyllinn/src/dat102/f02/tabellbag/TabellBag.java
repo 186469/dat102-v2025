@@ -1,7 +1,10 @@
 package dat102.f02.tabellbag;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -12,7 +15,11 @@ import java.util.Arrays;
  * @author Lars-Petter Helland
  */
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 public class TabellBag<T> implements BagADT<T> {
+=======
+public class TabellBag<T> implements BagADT <T> {
+>>>>>>> Stashed changes
 =======
 public class TabellBag<T> implements BagADT <T> {
 >>>>>>> Stashed changes
@@ -48,7 +55,10 @@ public class TabellBag<T> implements BagADT <T> {
 		return antall == tabell.length;
 	}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 	@Override
@@ -58,9 +68,14 @@ public class TabellBag<T> implements BagADT <T> {
 			return false;
 		}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		
 		tabell[antall] = newEntry;
 		antall++;
+=======
+		tabell[antall] = newEntry;
+		antall++;		
+>>>>>>> Stashed changes
 =======
 		tabell[antall] = newEntry;
 		antall++;		
@@ -75,7 +90,10 @@ public class TabellBag<T> implements BagADT <T> {
 			return null;
 		}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 		T element = tabell[antall-1];
@@ -86,6 +104,7 @@ public class TabellBag<T> implements BagADT <T> {
 
 	@Override
 	public boolean remove(T anEntry) {
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
 		boolean funnet = false;
@@ -104,6 +123,10 @@ public class TabellBag<T> implements BagADT <T> {
 		tabell[antall-1] = null;
 		antall--;
 		return true;
+=======
+		// TODO Auto-generated method stub
+		return false;
+>>>>>>> Stashed changes
 =======
 		// TODO Auto-generated method stub
 		return false;
@@ -132,7 +155,11 @@ public class TabellBag<T> implements BagADT <T> {
 		}
 		return false;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	}
+=======
+		}
+>>>>>>> Stashed changes
 =======
 		}
 >>>>>>> Stashed changes
