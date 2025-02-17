@@ -11,19 +11,23 @@ public class NoderMain {
 		
 		Node<String> temp = null; //Hjelpevariabel
 		
-		//1) Opprette en liste med 3 noder, forste--> [Per|-]--> [Pål|-]--> [Espen|null]
+		//1) Opprette en liste med 3 noder, forste--> [Per|-]--> [Pål|-]--> [Espen|null]	
 		
 		//1a) Vi begynner med å lage og sette inn det som blir siste node, [Espen|..]
-		// TODO
+		Node<String> første = new Node<>("Espen");
 		
 		//1b) Deretter lage nest siste node [Pål|..], og la den peke på [Espen|..]
-		// TODO
+		temp = new Node<>("Pål");
+		temp.neste = første;
+		første = temp;
 		
 		//1c) Deretter lage forste node [Per|..], og la den peke på [Pål|..]
-		// TODO
+		temp = new Node<>("Per");
+		temp.neste = første;
+		første = temp;
 		
 		//2) Skrive ut innhold/element i alle nodene i listen (bruk hjelpemetoden nedenfor)
-		// TODO
+		skrivUtListe(første);
 		
 		//3) Skrive ut innhold/element i andre node i listen, dvs. [Pål|..] 
 		// TODO
