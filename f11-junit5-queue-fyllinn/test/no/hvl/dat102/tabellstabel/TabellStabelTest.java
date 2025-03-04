@@ -18,7 +18,16 @@ class TabellStabelTest {
 
 	@BeforeEach
 	void nullstill() {
-		//TODO
+		stabel0 = new TabellStabel<String>();
+		
+		stabel1 = new TabellStabel<String>();
+		stabel1.push("eple");
+		
+		stabel2 = new TabellStabel<String>();
+		stabel2.push("potet");
+		stabel2.push("gulrot");
+
+
 	}
 	
 	/*
@@ -37,32 +46,48 @@ class TabellStabelTest {
 	
 	@Test
 	void enNyStabelSkalVaereTom() {
-		//TODO
+
+		assertTrue(stabel0.isEmpty());
 	}
 	
 	@Test
 	void enStabelMedEttEllerFlereElementerSkalIkkeVaereTom() {
-		//TODO
+		
+		assertFalse(stabel1.isEmpty());
+		assertFalse(stabel2.isEmpty());
+
 	}
 	
 	@Test
 	void pushSkalLeggeElementetPaaToppenAvStabelen() {
-		//TODO
+		
+		assertEquals("eple", stabel1.peek());
+		assertEquals("gulrot", stabel2.peek());
+		
+		stabel0.push("banan");
+		assertEquals("banan", stabel0.peek());
+		
+		stabel1.push("sitron");
+		assertEquals("sitron", stabel1.peek());
+
 	}
 	
 	@Test
 	void peekPaaTomStabelSkalGiEmptyStackException() {
-		//TODO
+		
+		assertThrows(EmptyStackException.class, () -> stabel0.peek());
 	}
 	
 	@Test
 	void peekPaaIkkeTomStabelSkalReturnereToppelementet() {
-		//TODO
+		assertEquals("eple", stabel1.peek());
+		assertEquals("gulrot", stabel2.peek());
 	}
 	
 	@Test
 	void peekPaaIkkeTomStabelSkalIkkeEndreStabelensInnhold() {
-		//TODO
+		assertEquals("eple", stabel1.peek());
+		assertEquals("sitron", stabel1.peek());
 	}
 	
 	@Test
