@@ -32,16 +32,15 @@ public class LenketSortertListe<T extends Comparable<? super T>> implements Sort
 	 * Rekursiv "hjelpe"-metode for å sette inn et nytt element i listen
 	 */
 	private Node add(T newEntry, Node p) {
+				
+		if(p == null || newEntry.compareTo(p.data) <= 0) {
+			Node temp = new Node(newEntry, p);
+			return temp;
+		}
 		
+		p.next = add(newEntry, p.next);
 		
-		
-		
-		//TODO - gjøre denne sammen i timen ...
-		
-		
-		
-		
-		return null;
+		return p;
 	}
 
 	/* ------------------------------------------------------------------------ */
